@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/authForm.css">
+        <link rel="stylesheet" href="/modalOfChat_Num.css">
+        <script src="/RegExpEmailAndPassword.js"></script>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>signup</title>
+</head>
+
+<body>
+    <h1 style="font-size: xx-large; text-align: center; color: white;">SignUp Form</h1>
+    <div id="auth">
+        <form action="" id="signUp" method="post">
+            <label for="fname">Firstname</label>
+            <input type="text" class="inp" id="fname" size="25" placeholder="" required>
+            
+            <label for="lname">Lastname</label>
+            <input type="text" class="inp" id="lname" placeholder="" required>
+            
+            <label for="email" >Email</label>
+            <input type="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" class="inp" id="email" placeholder="" required>
+            
+            <label for="pass">Password</label>
+            <input type="password" class="inp" id="pass" placeholder="" required>
+            
+            <label for="rep_pass">Repeat password</label>
+            <input type="password" class="inp" id="rep_pass" placeholder="" required>
+            
+        </form>
+        <button id="btn" type="submit">SignUp</button>
+        <span id="NewAuth"><a id="an" href="/authentication?authType=signin">SignIn</a> here</span>
+    </div>
+
+    <div class="modal" id="modal">
+
+        <div class="modal-box" id="modal-box">
+            <div id="modal-title"><h1>This is Your chat Number</h1></div>
+            <div id="modal-body">
+               <p id="chat_num"></p>
+               <button onclick="HomeBtn()" type="button" id="HomeBtn">Home</button>
+            </div>
+        </div>
+    </div>
+   <script src="/eyeToggle.js"></script>
+    <script src="/signUp.js"></script>
+</body>
+
+</html>

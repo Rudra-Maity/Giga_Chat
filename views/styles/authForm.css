@@ -1,0 +1,134 @@
+*{
+    font-size: 104%;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: hsl(0, 0%, 100%);
+
+    background: url('/nature.jpg')no-repeat ;
+    /* background-size: cover;   */
+}
+#auth{
+    max-width: 100%;
+    margin: 3% 15% 0% 15%;
+    /* border: 2px solid; */
+    position: relative;
+    padding: 2%;
+    /* opacity: 0.7; */
+    /* bottom: 8%; */
+    bottom:55px;
+}
+
+label{
+    display: inline-block;
+    /* position:absolute; */
+    text-align:end;
+    top: 50%;
+    transform :translateY(50%) ;
+    transition: 0.4s;
+    left: 10px;
+    z-index: 1
+}
+
+.inp{
+    width: 100%;
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   border-bottom: 2.5px solid rgb(0, 0, 0);
+   /* padding-bottom:2%; */
+   margin-bottom: 3%;
+   background: none;
+   color: rgb(255, 255, 255);
+}
+
+.inp:focus{
+    /* border-top-width:32px;  */
+    /* border-left-width: 0;  */
+    outline: none; 
+    /* border-right-width: 0;  */
+    padding-top: 3%;
+    transition: 0.2s ease-in;
+}
+
+#btn{
+    /* padding-top: 5%; */
+    /* width: 15%; */
+    background-color: #3800ff;;
+    border: none;
+    padding: 1.5% 5% 1.5% 5%;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+#NewAuth{
+    /* color: yellow; */
+    padding-left: 60%;
+}
+#an{
+    color: yellow;
+    text-decoration: none;
+}
+#an:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+#btn:hover{
+    background-color: rgb(1, 44, 255)
+
+}
+#chat_num{
+    color: blue;
+}
+#HomeBtn{
+    background-color: #3800ff;;
+    border: none;
+    padding: 1.5% 5% 1.5% 5%;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+input::placeholder{
+    color: rgb(255, 255, 255);
+}
+sub{
+    color: red;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 570px) {
+ 
+    #auth{
+        margin:auto;
+        /* position: static; */
+        /* display: flex; */
+        /* justify-content: center; */
+        bottom: auto;
+    }
+    #btn{
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+  }
+
+  .password-toggle-icon {
+    position: absolute;
+    top: 78%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 5%;
+}
+
+.password-toggle-icon i {
+      cursor: pointer;
+    /* font-size: 18px; */
+    line-height: 1;
+    /* color: #333; */
+    transition: color 0.3s ease-in-out;
+    margin-bottom: 20px;
+  }
