@@ -52,12 +52,13 @@ function onProfile(){
         contact_view.style.display="block";
         console.log('frfr');
         user_profile_container.style.display="none"
-        // chat_room.style.display='flex'
+        user_profile_container.style.transition="0.3s"
     }
     else {
         contact_view.style.display="none";
         console.log('sdfsad');
         user_profile_container.style.display="flex"
+        user_profile_container.style.transition="0.3s"
         // chat_room.style.display='flex'
 
     }

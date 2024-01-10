@@ -136,6 +136,7 @@ li{
 
 
 #chat-box{
+    position: sticky;
 }
 
 #user-profile-container{
@@ -554,14 +555,28 @@ flex: 10%;
     background-color: #202c33;
     border-bottom: 1px solid #111b21;
 }
-
+#back-to-contact{
+    display: none;
+}
 
 
 @media screen and (max-width: 676px) {
+    #back-to-contact {
+        display: block;
+    }
     #contact-view {
       flex: 100%;
+      transition: 0.3s ease;
     }
+    
     #user-profile-container{
         flex: 100%;
     }
+  }
+
+  #back-to-contact-svg:hover{
+    transition: 0.4s;
+    cursor: pointer;
+    background-color: #d5dadba0;
+    border-radius: 50%;
   }
