@@ -1,1 +1,4 @@
 git add -A && git commit -m https://github.com/Rudra-Maity/Giga_Chat.git && git push origin main
+git add /Users/RUDRA/OneDrive/Desktop/Giga_Chat/Schema/x.js
+git commit -m "Your commit message here"
+git push origin main
