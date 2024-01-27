@@ -64,3 +64,9 @@ function onProfile(){
     }
 
 }
+
+// document.addEventListener("click",(e)=>{
+//     if (e.target.tagName === 'a' && !(e.target.className === 'AHC')) {
+//         e.preventDefault();
+//     }
+// }) 

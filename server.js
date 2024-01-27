@@ -14,6 +14,7 @@ const AuthAndProfile=require('./routers/AuthRoutes.js');
 const profile=require('./routers/profile.js')
 require('./Schema/conn.js')
 
+
 //server creation
 const app = express();
 const server = http.createServer(app);
@@ -49,18 +50,19 @@ morgan.token('host', function(req, res) {
     app.use(morgan(':method :host :status  :res[content-length] - :response-time ms'))
     
     // Set up middleware to pass io to the routes
-    app.use((req, res, next) => {
-      req.io = io;
-      next();
-    });
+    // app.use((req, res, next) => {
+    //   req.io = io;
+    //   next();
+    // });
     
     // Set up middleware, routes, and Socket.IO events
     app.use(express.json());
     
     //specific routes
-    app.use('/', demoRouter);
+    app.use('/', demoRouter(io));
     app.use('/',AuthAndProfile);
     app.use('/',profile);
+    // app.use('/',SocketConn);
     
     // Custom middleware for handling 404 errors
     app.use((req, res) => {
