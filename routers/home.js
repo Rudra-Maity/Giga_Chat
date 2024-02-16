@@ -25,9 +25,9 @@ io.on('connect', (socket) => {
     socket.on('createMessage',(msg)=>{
 
         console.log(msg, socket.id);
+        socket.emit('newMessage','From Server')
     })
 
-    socket.emit('newMessage','From Server')
     
     socket.emit('x','djiaksdj')
   

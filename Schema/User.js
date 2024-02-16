@@ -12,7 +12,8 @@ const User=new mongoose.Schema({
     createdAt:{
         type:Date,
         default:Date.now
-    }
+    },
+    profileImg:{type: Buffer}
 });
 
 module.exports=mongoose.model('User',User);
