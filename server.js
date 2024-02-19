@@ -43,9 +43,8 @@ morgan.token('host', function(req, res) {
     //cookie parser
     app.use(cookieParser())
 
-    app.use(express.static(path.resolve(__dirname, 'views', 'styles')));
-    app.use(express.static(path.resolve(__dirname, 'views', 'Scripts')));
-    app.use(express.static(path.resolve(__dirname, 'views', 'public')));
+    app.use(express.static(path.resolve(__dirname, 'views',)));
+    // app.use(express.static(path.resolve(__dirname, 'views', 'public')));
 
     app.use(morgan(':method :host :status  :res[content-length] - :response-time ms'))
     
@@ -71,7 +70,6 @@ morgan.token('host', function(req, res) {
 
 
     
-
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

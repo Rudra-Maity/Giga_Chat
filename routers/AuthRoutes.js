@@ -26,7 +26,7 @@ router.route('/authentication')
 
     switch (authType){
         case 'signup':
-            if(!jwtDecryption(req.cookies.sid)) res.sendFile(htmlFile+'/signUp.html')
+            if(!jwtDecryption(req.cookies.sid)) res.sendFile(htmlFile+'/signup.html')
             else res.send('<script>window.location.replace("/")</script>')
             break;
         
